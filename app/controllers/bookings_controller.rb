@@ -1,6 +1,10 @@
 class BookingsController < ApplicationController
   require 'time_difference'
-  before_action :set_bike, only: [:create]
+  before_action :set_bike, only: [:create, :new]
+
+  def show
+    @booking = Booking.find(params[:id])
+  end
 
   def new
     @booking = Booking.new
@@ -8,13 +12,14 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @bike = Bike.find(params[:bike_id])
     @booking.user = current_user
     @booking.bike = @bike
     @booking.status = 'pending'
     if @booking.save
-      redirect_to bookings_path
+
+      redirect_to booking_path(@booking)
     else
+
       render :new
     end
   end
@@ -26,6 +31,6 @@ class BookingsController < ApplicationController
   end
 
   def set_bike
-    @bike = Bike.find(params[:id])
+    @bike = Bike.find(params[:bike_id])
   end
 end
