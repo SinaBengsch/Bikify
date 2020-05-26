@@ -9,4 +9,21 @@ class BikesController < ApplicationController
   def show
     @bike = Bike.find(params[:id])
   end
+
+  def new
+    @bike = Bike.new
+  end
+
+  def create
+    @bike = Bike.new(bikes_params)
+    @bike.save
+
+    redirect_to bikes_path
+  end
+
+  private
+
+  def bikes_params
+    params.require(:bike).permit(:name, :description, :price_per_day, :location)
+  end
 end
