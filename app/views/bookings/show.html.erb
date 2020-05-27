@@ -1,6 +1,23 @@
-<h1><%= @booking.bike.name %></h1>
+<!-- <h1><%#= @booking.bike.name %></h1>
 <%= @booking.total_price %>
 <br>
 <br>
 
+<%#= link_to 'Back to bikes', bikes_path, { class: "btn btn-outline-success" } %> -->
+
+
+<h1><%= @booking.bike.name %></h1>
+<p>
+</p>
+<p>
+  Your payment is <%= @booking.total_price %> EURO
+</p>
+<p>
+  Your booking is from <%= @booking.start_date.strftime("%F") %> until <%= @booking.end_date.strftime("%F") %>
+</p>
+<p>
+  We wish you a wonderful journey!
+</p>
+<br>
+<br>
 <%= link_to 'Back to bikes', bikes_path, { class: "btn btn-outline-success" } %>
