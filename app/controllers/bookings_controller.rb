@@ -16,10 +16,8 @@ class BookingsController < ApplicationController
     @booking.bike = @bike
     @booking.status = 'pending'
     if @booking.save
-
       redirect_to booking_path(@booking)
     else
-
       render :new
     end
   end
