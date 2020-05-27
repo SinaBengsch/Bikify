@@ -14,7 +14,7 @@
     Your payment is <%= @booking.total_price %> EURO
   </p>
   <p>
-    Your booking is from <%= @booking.start_date.strftime("%F") %> until <%= @booking.end_date.strftime("%F") %>
+    Your booking is from <%= @booking.start_date.strftime('%Y-%m-%d %H:%M:%S') %> until <%= @booking.end_date.strftime('%Y-%m-%d %H:%M:%S') %>
   </p>
   <p>
     We wish you a wonderful journey!
