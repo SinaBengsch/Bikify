@@ -1,7 +1,7 @@
 <div class="container">
   <div class="form-wrapper" style="width:500px; margin: 0 auto;">
-    <h1>HHHHH</h1>
-    <%= simple_form_for [@bike, @booking] do |t| %>
+    <h1>Where do you want to ride?</h1>
+    <%= simple_form_for  do |t| %>
     <%= t.input :start_date, as: :string, input_html: {class: "datepicker" }%>
     <%= t.input :end_date, as: :string, input_html: {class: "datepicker"}%>
     <%= t.submit "Go", class: "btn btn_primary" %>
