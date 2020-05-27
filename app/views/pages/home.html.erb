@@ -1,5 +1,5 @@
 
-<div class="container" style="height: 100%;">
+<!-- <div class="container">
 
 <h1>Welcome to Bikify</h1>
 <p><strong>Find a bike where ever you are!</strong></p>
@@ -10,6 +10,17 @@
 
 
 
+</div> -->
+
+
+
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path 'banner1.jpg' %>');">
+  <div class="banner-content">
+    <h1>Welcome to Bikify</h1>
+    <p>Find a bike where ever you are!</p>
+    <div  class="nav-item" id="index-btn">
+  <%= link_to "View Bikes", bikes_path, { class: "btn btn-primary" } %>
 </div>
-
-
+  </div>
+</div>

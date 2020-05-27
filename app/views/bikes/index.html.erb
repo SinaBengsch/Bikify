@@ -1,35 +1,35 @@
 
 
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
-<p id="notice"><%= notice %></p>
+  <h1>All Bikes for you</h1>
 
-<h1>All Bikes for you</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Location</th>
-      <th>Price/day/Euro</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @bikes.each do |bike| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= bike.name %></td>
-        <td><%= bike.description %></td>
-        <td><%= bike.location %></td>
-        <td><%= bike.price_per_day %></td>
-        <td><%= link_to 'show', bike, { class: "btn btn-outline-success" } %></td>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Location</th>
+        <th>Price/day/Euro</th>
+        <th colspan="4"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-   <td><%= link_to 'home', pages_home_path, { class: "btn btn-outline-success" } %></td>
-   <td><%= link_to 'Creat a new bike', new_bike_path, { class: "btn btn-outline-success" } %></td>
+    <tbody>
+      <% @bikes.each do |bike| %>
+        <tr>
+          <td><%= bike.name %></td>
+          <td><%= bike.description %></td>
+          <td><%= bike.location %></td>
+          <td><%= bike.price_per_day %></td>
+          <td><%= link_to 'show', bike, { class: "btn btn-outline-success" } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
+  <br>
+     <td><%= link_to 'home', pages_home_path, { class: "btn btn-outline-success" } %></td>
+     <td><%= link_to 'Creat a new bike', new_bike_path, { class: "btn btn-outline-success" } %></td>
+</div>
