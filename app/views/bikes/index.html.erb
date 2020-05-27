@@ -23,13 +23,13 @@
           <td><%= bike.description %></td>
           <td><%= bike.location %></td>
           <td><%= bike.price_per_day %></td>
-          <td><%= link_to 'show', bike, { class: "btn btn-outline-success" } %></td>
+          <td><%= link_to 'show', bike, { class: "btn btn-primary" } %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
 
   <br>
-     <td><%= link_to 'home', pages_home_path, { class: "btn btn-outline-success" } %></td>
-     <td><%= link_to 'Creat a new bike', new_bike_path, { class: "btn btn-outline-success" } %></td>
+     <td><%= link_to 'Home', pages_home_path, { class: "btn btn-primary" } %></td>
+     <td><%= link_to 'Create a bike', new_bike_path, { class: "btn btn-primary" } %></td>
 </div>
