@@ -1,3 +1,12 @@
 <div class="container"><div>
-  <h1><%= "Bike 1" %></h1>
+  <h1><%= @bike.name %></h1>
+  <p>About: <%= @bike.description %></p>
+  <h5>$<%= @bike.price_per_day %> per day</h5>
+  <h5>Location: <%= @bike.location %></h5>
+</div>
+
+
+<div>
+  <%= link_to 'Back to bikes', bikes_path, { class: "btn btn-outline-success" } %>
+  <%= link_to 'Book bike', new_bike_booking_path(@bike), { class: "btn btn-outline-success" } %>
 </div>
