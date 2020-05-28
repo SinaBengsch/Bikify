@@ -35,6 +35,9 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @booking.status = 'decline'
     @booking.save
+
+    # uncomment below code if page exists
+    # redirect_to dashboard_path
   end
 
   private
