@@ -4,7 +4,11 @@
 class BikesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
+    if params[:query].present?
+      @bikes = Bike.where("location ILIKE ?", "%#{params[:query]}%")
+    else
     @bikes = Bike.all
+    end
   end
 
   def show

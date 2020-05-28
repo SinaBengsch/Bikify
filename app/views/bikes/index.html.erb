@@ -1,3 +1,18 @@
+<div class="container-search">
+<%= form_tag bikes_path, method: :get do %>
+  <div class='inline'>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a location"
+  %>
+  </div>
+  <div class='inline'>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+  </div>
+<% end %>
+</div>
+
 <div class="container">
    <div class="create-button">
     <td ><%= link_to 'Create a bike', new_bike_path, {class: "create-button-design"} %></td>

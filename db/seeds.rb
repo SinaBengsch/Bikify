@@ -1,4 +1,5 @@
 require "open-uri"
+require "yaml"
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -29,7 +30,6 @@ user2 = User.create(
   password: "password_2",
   username: "user2"
 )
-
 
 file = URI.open('https://res.cloudinary.com/detomqnqx/image/upload/v1590669761/mkm5osexpqqsbuziicx8.jpg')
 
