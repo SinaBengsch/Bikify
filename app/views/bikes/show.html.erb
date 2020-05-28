@@ -1,12 +1,21 @@
-<div class="container"><div>
+<div class="container">
   <h1><%= @bike.name %></h1>
-  <p>About: <%= @bike.description %></p>
-  <h5>$<%= @bike.price_per_day %> per day</h5>
-  <h5>Location: <%= @bike.location %></h5>
+  <div class="box">
+    <div>
+      <!-- <img src="images/banner1.jpg" alt="bike"> -->
+      <div class="image" style="background-image: url('<%= image_path 'banner1.jpg' %>');">
+      </div>
+        <p>About: <%= @bike.description %></p>
+        <h6>Location: <%= @bike.location %>  / $<%= @bike.price_per_day %> per day </h6>
+    </div>
+
+    <div class="booking-form">
+      <%= render 'booking_form' %>
+    </div>
+    </div>
+      <div>
+        <%= link_to '<', bikes_path, { class: "btn btn-primary" } %>
+
+      </div>
 </div>
 
-
-<div>
-  <%= link_to 'Back to bikes', bikes_path, { class: "btn btn-primary" } %>
-  <%= link_to 'Book bike', new_bike_booking_path(@bike), { class: "btn btn-primary" } %>
-</div>
