@@ -10,6 +10,7 @@
     <br>
     <%= f.input :price_per_day, label: false, placeholder: "Price per day", input_html: {class: "form-control w-50"} %>
     <br>
+    <%= f.input :photo, as: :file %>
     <p>Choose your city:</p>
     <!-- TODO: Review if we need to change dropdown and if collection is the right way to do it (maybe we need as: :select) -->
     <%= f.input :location, label: false, placeholder:"City", collection: [ "Berlin", "London", "New York", "Hamburg"], input_html: {class: "form-control w-50"}%>
