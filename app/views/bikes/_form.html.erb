@@ -6,6 +6,7 @@
     <%= f.input :name %>
     <%= f.input :description %>
     <%= f.input :price_per_day %>
+    <%= f.input :photo, as: :file %>
     <!-- TODO: Review if we need to change dropdown and if collection is the right way to do it (maybe we need as: :select) -->
     <%= f.input :location, collection: [ "Berlin", "London", "New York"]%>
   </div>

@@ -1,29 +1,27 @@
-
-
 <div class="container">
   <p id="notice"><%= notice %></p>
 
   <h1>All Bikes for you</h1>
   <div class="cards">
-
       <% @bikes.each do |bike| %>
     <div class="card-bike">
-      <img style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path 'bike_1.jpg' %>');">
+      <% if bike.photo.attached? %>
+        <%= cl_image_tag bike.photo.key, height: 300, width: 400, crop: :fill %>
+      <% else %>
+        <%= image_tag 'bike_1', class: 'bike-image' %>
+      <% end %>
         <div class="card-bike-infos" >
           <div >
             <h2><td> <%= link_to bike.name, bike %></td></h2>
             <p class="left-even"><td><%= bike.location %></td></p>
           </div>
           <h2 class="card-bike-pricing"><%= bike.price_per_day %> €/Day
-
-
           </h2>
           <!-- <img src=# class="card-bike-user avatar-bordered" /> -->
         </div>
      </div>
       <% end %>
-
-  </div>
-
      <td><%= link_to 'Home', pages_home_path, { class: "btn btn-primary" } %></td>
      <td><%= link_to 'Create a bike', new_bike_path, { class: "btn btn-primary" } %></td>
+  </div>
+</div>

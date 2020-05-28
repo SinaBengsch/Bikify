@@ -1,3 +1,4 @@
+require "open-uri"
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -29,13 +30,17 @@ user2 = User.create(
   username: "user2"
 )
 
-Bike.create!(
+
+file = URI.open('https://res.cloudinary.com/detomqnqx/image/upload/v1590669761/mkm5osexpqqsbuziicx8.jpg')
+
+bike = Bike.create!(
   name: "Beach Cruiser",
   location: "Berlin",
   description: "A nice, beach-y, cruiser-y bicycle, friend.",
   price_per_day: 5,
   user: user1
-)
+  )
+  bike.photo.attach(io: file, filename: 'photo')
 
 Bike.create(
   name: "Mountain Bike",
