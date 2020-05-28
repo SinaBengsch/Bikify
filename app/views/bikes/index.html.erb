@@ -4,32 +4,26 @@
   <p id="notice"><%= notice %></p>
 
   <h1>All Bikes for you</h1>
+  <div class="cards">
 
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Location</th>
-        <th>Price/day/Euro</th>
-        <th colspan="4"></th>
-      </tr>
-    </thead>
-
-    <tbody>
       <% @bikes.each do |bike| %>
-        <tr>
-          <td><%= bike.name %></td>
-          <td><%= bike.description %></td>
-          <td><%= bike.location %></td>
-          <td><%= bike.price_per_day %></td>
-          <td><%= link_to 'show', bike, { class: "btn btn-primary" } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+    <div class="card-bike">
+      <img style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path 'bike_1.jpg' %>');">
+        <div class="card-bike-infos" >
+          <div >
+            <h2><td> <%= link_to bike.name, bike %></td></h2>
+            <p class="left-even"><td><%= bike.location %></td></p>
+          </div>
+          <h2 class="card-bike-pricing"><%= bike.price_per_day %> €/Day
 
-  <br>
+
+          </h2>
+          <!-- <img src=# class="card-bike-user avatar-bordered" /> -->
+        </div>
+     </div>
+      <% end %>
+
+  </div>
+
      <td><%= link_to 'Home', pages_home_path, { class: "btn btn-primary" } %></td>
      <td><%= link_to 'Create a bike', new_bike_path, { class: "btn btn-primary" } %></td>
-</div>
