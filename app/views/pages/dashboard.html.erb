@@ -20,31 +20,33 @@
 
   <h3>Upcoming</h3>
   <% @upcoming.each do |booking| %>
-  <div class="card-product">
-    <img src="#" />
-    <div class="card-product-infos">
-      <h2><%= booking.bike.name %></h2>
-      <p><%= booking.bike.description %></p>
-    </div>
-  </div>
-  <% end %>
-  <h3>Past</h3>
-  <% @past.each do |booking| %>
-  <div class="card-product">
-      <% if bike.photo.attached? %>
-        <%= cl_image_tag bike.photo.key, height: 300, width: 400, crop: :fill %>
-      <% else %>
-        <%= image_tag 'bike_1', class: 'bike-image' %>
-      <% end %>
-      <div class="card-product-infos">
-        <div class="card text-right">
-          <h2>Product name</h2>
-        </div>
-        <div class="card-product-description">
-          <p>Product description with <strong>relevant info</strong> only.</p>
+
+      <div class="card-product">
+          <% if booking.bike.photo.attached? %>
+            <%= cl_image_tag booking.bike.photo.key, height: 300, width: 400, crop: :fill %>
+          <% else %>
+            <%= image_tag 'bike_1', class: 'bike-image' %>
+          <% end %>
+        <div class="card-product-infos">
+          <h2><%= booking.bike.name %></h2>
+          <p><%= booking.bike.description %></p>
         </div>
       </div>
 
   <% end %>
-  </div>
+
+  <h3>Past</h3>
+    <% @past.each do |booking| %>
+          <div class="card-product">
+              <% if booking.bike.photo.attached? %>
+                <%= cl_image_tag booking.bike.photo.key, height: 300, width: 400, crop: :fill %>
+              <% else %>
+                <%= image_tag 'bike_1', class: 'bike-image' %>
+              <% end %>
+            <div class="card-product-infos">
+              <h2><%= booking.bike.name %></h2>
+              <p><%= booking.bike.description %></p>
+            </div>
+          </div>
+        <% end %>
 </div>
