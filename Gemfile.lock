@@ -63,6 +63,8 @@ GEM
     aws_cf_signer (0.1.3)
     bcrypt (3.1.13)
     bindex (0.8.1)
+    bootsnap (1.4.6)
+      msgpack (~> 1.0)
     bootstrap-datepicker-rails (1.9.0.1)
       railties (>= 3.0)
     builder (3.2.4)
@@ -97,7 +99,7 @@ GEM
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.12.2)
-    font-awesome-sass (5.12.0)
+    font-awesome-sass (5.13.0)
       sassc (>= 1.11)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -126,6 +128,7 @@ GEM
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.1)
+    msgpack (1.3.3)
     netrc (0.11.0)
     nio4r (2.5.2)
     nokogiri (1.10.9)
@@ -255,6 +258,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
+  bootsnap (>= 1.4.2)
   bootstrap-datepicker-rails
   byebug
   capybara (>= 2.15)
@@ -272,8 +276,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver
   simple_form
-  spring
-  spring-watcher-listen (~> 2.0.0)
+  spring-watcher-listen (~> 2.0.1)
   time_difference
   turbolinks (~> 5)
   tzinfo-data
