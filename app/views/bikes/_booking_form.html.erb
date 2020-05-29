@@ -1,5 +1,5 @@
 <div class="container">
-    <h4>Choose your dates</h4>
+    <h4 id="chose-dates">Choose your dates</h4>
     <%= simple_form_for [@bike, @booking] do |t| %>
     <%= t.input :start_date, as: :string, label: false, placeholder: "start date", input_html: {id: "range_start", class: "form-control w-100"}%>
     <br>

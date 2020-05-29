@@ -1,10 +1,14 @@
 .container-search {
-  margin-top: 40px;
+  margin-top: 80px;
   margin-bottom: 30px;
   display: flex;
   justify-content: space-around;
   align-content: center;
 
+}
+
+.crazy {
+  margin-top: 40px;
 }
 
 .inline {
@@ -80,15 +84,14 @@
 .card-bike-pricing {
   // margin-bottom: 100px;
   padding-bottom: 10px;
+
   // font-family: ;
   // color: ;
   font-family: 'Hind Siliguri', sans-serif;
   // font-weight: bold;
   color: black;
 }
-
-.card-bike-name {
-  // color: ;
+  text-align: right;
 }
 
 .cards {

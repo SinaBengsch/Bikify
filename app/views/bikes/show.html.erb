@@ -1,21 +1,43 @@
 <div class="container">
-  <h1><%= @bike.name %></h1>
+
   <div class="box">
-    <div>
+
+<div class="cards-showpage">
+    <div class="card-bike-showpage">
+      <% if @bike.photo.attached? %>
+        <%= cl_image_tag @bike.photo.key, height: 300, width: 400, crop: :fill %>
+          <% else %>
+        <%= image_tag 'bike_1.jpg', class: 'bike-image' %>
+          <% end %>
+        <div class="card-bike-infos-showpage" >
+          <div >
+            <h2 id="name-showpage"><td> <%= link_to @bike.name, @bike %></td></h2>
+
+            <td><p class="left-even" id="location-showpage"><%= @bike.location %></p><h2 class="card-bike-pricing"><%= @bike.price_per_day %> €/Day</h2></td>
+
+            <p class="left-even"><p><strong>About:</strong> <%= @bike.description %></p></p>
+          </div>
+          <!-- <img src=# class="card-bike-user avatar-bordered" /> -->
+        </div>
+     </div>
+  </div>
+
+
+    <!-- <div>
       <!-- <img src="images/banner1.jpg" alt="bike"> -->
-      <div class="image" style="background-image: url('<%= image_path 'banner1.jpg' %>');">
+      <!-- <div class="image" style="background-image: url('<%= image_path 'banner1.jpg' %>');">
       </div>
         <p>About: <%= @bike.description %></p>
         <h6>Location: <%= @bike.location %>  / $<%= @bike.price_per_day %> per day </h6>
-    </div>
+    </div> -->
 
-    <div class="booking-form">
+    <div class="booking-form-showpage">
       <%= render 'booking_form' %>
     </div>
+
     </div>
       <div>
         <%= link_to '<', bikes_path, { class: "btn btn-primary" } %>
-
       </div>
 </div>
 
