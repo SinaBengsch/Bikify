@@ -8,9 +8,9 @@ require "yaml"
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Booking.destroy_all if Rails.env.development?
-Bike.destroy_all if Rails.env.development?
-User.destroy_all if Rails.env.development?
+Booking.destroy_all # if Rails.env.development?
+Bike.destroy_all # if Rails.env.development?
+User.destroy_all # if Rails.env.development?
 puts 'Delete data from database...'
 user1 = User.create!(
   email: "philipp@email.com",
