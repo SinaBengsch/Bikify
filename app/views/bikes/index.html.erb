@@ -28,7 +28,7 @@
       <% if bike.photo.attached? %>
         <%= cl_image_tag bike.photo.key, height: 300, width: 400, crop: :fill %>
       <% else %>
-        <%= image_tag 'bike_1', class: 'bike-image' %>
+        <%= image_tag 'bike_1.jpg', class: 'bike-image' %>
       <% end %>
         <div class="card-bike-infos" >
           <div >
