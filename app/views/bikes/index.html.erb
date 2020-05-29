@@ -14,8 +14,8 @@
 </div>
 
 <div class="container">
-   <div class="create-button">
-    <td ><%= link_to 'Create a bike', new_bike_path, {class: "create-button-design"} %></td>
+   <div class="nav-item" id="index-btn">
+    <td><%= link_to 'Create a bike', new_bike_path, { class: "btn btn-primary" } %></td>
   </div>
   <p id="notice"><%= notice %></p>
 
@@ -32,7 +32,7 @@
       <% end %>
         <div class="card-bike-infos" >
           <div >
-            <h2><td> <%= link_to bike.name, bike %></td></h2>
+            <h2 class="card-bike-name"><td> <%= link_to bike.name, bike %></td></h2>
             <p class="left-even"><td><%= bike.location %></td></p>
           </div>
           <h2 class="card-bike-pricing"><%= bike.price_per_day %> €/Day
