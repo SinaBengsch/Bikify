@@ -1,0 +1,62 @@
+.cards-showpage {
+  width: 500px;
+  margin-bottom: 20px;
+}
+
+.card-bike-showpage > img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.card-bike-showpage h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-bike-showpage p {
+  font-size: 16px;
+  opacity: .9;
+  margin: 0;
+}
+
+.card-bike-showpage {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-bike-showpage .card-bike-infos-showpage {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+#name-showpage {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+#location-showpage {
+  font-weight: bold;
+  opacity: 1;
+  color: black;
+}
+
+.booking-form-showpage {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  height: 250px;
+  border-top-left-radius: 4px;
+  border-top-right-radius:  4px;
+}
+
+#chose-dates {
+  margin-bottom: 10px;
+}
