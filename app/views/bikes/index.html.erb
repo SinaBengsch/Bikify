@@ -1,7 +1,12 @@
 <div class="container">
+   <div class="create-button">
+    <td ><%= link_to 'Create a bike', new_bike_path, {class: "create-button-design"} %></td>
+  </div>
   <p id="notice"><%= notice %></p>
 
-  <h1>All Bikes for you</h1>
+  <h2>All Bikes for you</h2>
+
+  <br>
   <div class="cards">
       <% @bikes.each do |bike| %>
     <div class="card-bike">
@@ -21,7 +26,5 @@
         </div>
      </div>
       <% end %>
-     <td><%= link_to 'Home', pages_home_path, { class: "btn btn-primary" } %></td>
-     <td><%= link_to 'Create a bike', new_bike_path, { class: "btn btn-primary" } %></td>
   </div>
 </div>
